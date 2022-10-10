@@ -3,12 +3,16 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Context.sol";
 import "./CustomERC20.sol";
 
 contract Factory is Ownable {
+    // Events
     event ERC20TokenCreated(address tokenAddress);
 
+    // Constructor
+    constructor(){}
+
+    // Public functions
     function deployNewERC20Token (
         string calldata name,
         string calldata symbol,
